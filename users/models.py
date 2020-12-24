@@ -28,15 +28,15 @@ class User(AbstractUser):
         (CURRENCY_USD, "USD"),
         (CURRENCY_KRW, "KRW")
     )
-    avatar = models.ImageField(null=True, blank=True)
+    avatar = models.ImageField(blank=True)
     gender = models.CharField(choices=GENDER_CHOICES,
-                              max_length=10, null=True, blank=True)
-    bio = models.TextField(default="", blank=True)
+                              max_length=10,  blank=True)
+    bio = models.TextField(blank=True)
     # null = True를 써도 됨.
     # default는 db를 위한 것이고, blank는 Form을 위한 것.
-    birthdate = models.DateField(null=True)
+    birthdate = models.DateField(blank=True, null=True)
     language = models.CharField(
-        choices=LANGUAGE_CHOICES, max_length=2, null=True, blank=True)
+        choices=LANGUAGE_CHOICES, max_length=2,  blank=True)
     currency = models.CharField(
-        choices=CURRENCY_CHOICES, max_length=3, null=True, blank=True)
+        choices=CURRENCY_CHOICES, max_length=3,  blank=True)
     superhost = models.BooleanField(default=False)
