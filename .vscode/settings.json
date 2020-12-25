@@ -1,5 +1,4 @@
 {
-    "python.pythonPath": "C:/Users/손용석/.virtualenvs/airbnb-clone-5q04mfWS/Scripts/python",
     "python.linting.pylintEnabled": false,
     "python.linting.flake8Enabled": true,
     "python.linting.enabled": true,
